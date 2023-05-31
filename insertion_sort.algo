@@ -1,0 +1,28 @@
+
+PROCEDURE insrtin sort(VAR tab : ARRAY_OF INTEGER)
+VAR
+ i,j,card : INTEGER;
+ BEGIN
+
+ //reading array
+  FOR i FROM 0 TO tab.length-1 DO
+    Read(tab[i]);
+  END_FOR
+
+  Write("pick element to be sorted");
+  Read(card);
+
+//sorting
+    FOR i FROM 1 TO tab.length-1 DO //looping on sorted elements
+    j:=i-1;
+    FOR j FROM 0 TO tab.length-1-i   DO
+      
+     WHILE (tab[card] < tab[j]) DO//compare 
+        tab[j]:=tab[card];
+        
+        j:=j-1;
+     END_WHILE
+        i:=i+1;
+    END_FOR
+    Write("your know cartes sortes is "tab);
+END
